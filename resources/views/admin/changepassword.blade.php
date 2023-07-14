@@ -61,15 +61,10 @@
                            <input type="password" id="rpwd" placeholder="{{__('messages.r_n_pd')}}" class="form-control" name="rpwd" onchange="checkboth(this.value)" required="">
                         </div>
                         <div>
-                           @if(Session::get("demo")==0)
-                               <button id="payment-button" type="button" class="btn btn-lg btn-info btn-block" onclick="disablebtn()">
-                           {{__('messages.update')}}
-                           </button>
-                           @else
+                         
                              <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
                            {{__('messages.update')}}
                            </button>
-                           @endif
                          
                         </div>
                      </form>

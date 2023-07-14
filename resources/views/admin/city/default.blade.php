@@ -67,15 +67,10 @@
                   </div>
                   <div class="col-md-12">
                      <div class="col-md-6">
-                           @if(Session::get("demo")==0)
-                               <button id="payment-button" type="button" class="btn btn-primary btn-md form-control" onclick="disablebtn()">
-                           {{__('messages.add')}}
-                           </button>
-                           @else
+                         
                              <button id="payment-button" type="submit" class="btn btn-primary btn-md form-control">
                            {{__('messages.add')}}
                            </button>
-                           @endif
                         
                      </div>
                      <div class="col-md-6">
@@ -107,15 +102,9 @@
                   </div>
                   <div class="col-md-12">
                      <div class="col-md-6">
-                          @if(Session::get("demo")==0)
-                               <button id="payment-button" type="button" class="btn btn-primary btn-md form-control" onclick="disablebtn()">
-                           {{__('messages.update')}}
-                           </button>
-                           @else
                              <button id="payment-button" type="submit" class="btn btn-primary btn-md form-control">
                            {{__('messages.update')}}
                            </button>
-                           @endif
                      </div>
                      <div class="col-md-6">
                         <input type="button" class="btn btn-secondary btn-md form-control" data-dismiss="modal" value="{{__('messages.close')}}">

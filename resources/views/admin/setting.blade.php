@@ -56,19 +56,12 @@
                            <div class="form-group">
                               <label for="email" class=" form-control-label">{{__('messages.order_status')}}:-</label>
                               @if($data->order_status=='1')
-                                @if(Session::get("demo")==0)
-                                 <input type="button" name="add_menu_cat"  class="btn btn-primary btn-flat m-b-30 m-t-30 orderbtn" value="{{__('messages.online')}}" onclick="disablebtn()">
-                                 @else
+                                
                                   <button class="btn btn-primary btn-flat m-b-30 m-t-30 orderbtn" onclick="changeordersetting('0')">{{__('messages.online')}}</button>
-                                 @endif
                              
                               @endif
                               @if($data->order_status=='0')
-                               @if(Session::get("demo")==0)
-                                 <input type="button" name="add_menu_cat"  class="btn btn-primary btn-flat m-b-30 m-t-30 orderbtn" value="{{__('messages.offline')}}" onclick="disablebtn()">
-                                 @else
                                   <button class="btn btn-primary btn-flat m-b-30 m-t-30 orderbtn" onclick="changeordersetting('1')">{{__('messages.offline')}}</button>
-                                 @endif
                               @endif
                            </div>
                            <div class="form-group">
@@ -100,13 +93,8 @@
                                  </select>
                               </div>
                            <div class="col-md-12"> 
-                                @if(Session::get("demo")==0)
-                                     <button id="payment-button" type="button" class="btn btn-lg btn-info btn-block" onclick="disablebtn()">
-                                 {{__('messages.update')}}
-                                 </button>
-                                 @else
+                               
                                   <button class="btn btn-primary btnright" type="submit" > {{__('messages.update')}}</button>
-                                 @endif
                            </div>
                      </form>
                   </div>
@@ -173,13 +161,7 @@
                      </div>
                      <div class="form-group col-md-12">
                        
-                           @if(Session::get("demo")==0)
-                               <button id="payment-button" type="button" class="btn btn-lg btn-info btn-block" onclick="disablebtn()">
-                           {{__('messages.update')}}
-                           </button>
-                           @else
                             <button class="btn btn-primary btnright" type="submit"> {{__('messages.update')}}</button>
-                           @endif
                      </div>
                   </form>
                   </div>
@@ -241,11 +223,6 @@
                         </div>
                      </div>
                      <div class="form-group col-md-12">
-                           @if(Session::get("demo")==0)
-                               <button id="payment-button" type="button" class="btn btn-lg btn-info btn-block" onclick="disablebtn()">
-                           {{__('messages.update')}}
-                           </button>
-                           @else
                             <button class="btn btn-primary btnright" type="submit"> {{__('messages.update')}}</button>
                            @endif
                         </form>
@@ -315,13 +292,7 @@
                     
                      <div class="form-group col-md-12">
                        
-                           @if(Session::get("demo")==0)
-                               <button id="payment-button" type="button" class="btn btn-lg btn-info btn-block" onclick="disablebtn()">
-                           {{__('messages.update')}}
-                           </button>
-                           @else
                             <button class="btn btn-primary btnright" type="submit"> {{__('messages.update')}}</button>
-                           @endif
                      </div>
                   </form>
                   </div>

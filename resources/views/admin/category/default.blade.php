@@ -72,11 +72,8 @@
                   </div>
                   <div class="col-md-12">
                      <div class="col-md-6">
-                           @if(Session::get("demo")==0)
-                           <input type="button" name="add_menu_cat"  class="btn btn-primary btn-md form-control" value="{{__('messages.add')}}" onclick="disablebtn()">
-                           @else
+                        
                             <input type="submit" name="add_menu_cat"  class="btn btn-primary btn-md form-control" value="{{__('messages.add')}}">
-                           @endif
                        
                      </div>
                      <div class="col-md-6">
@@ -115,11 +112,8 @@
                   <div class="col-md-12">
                      <div class="col-md-6">
                         
-                         @if(Session::get("demo")==0)
-                           <input type="button" name="add_menu_cat"  class="btn btn-primary btn-md form-control" value="{{__('messages.update')}}" onclick="disablebtn()">
-                           @else
+                        
                            <input type="submit" name="add_menu_cat"  class="btn btn-primary btn-md form-control" value="{{__('messages.update')}}">
-                           @endif
                      </div>
                      <div class="col-md-6">
                         <input type="button" class="btn btn-secondary btn-md form-control" data-dismiss="modal" value="{{__('messages.close')}}">

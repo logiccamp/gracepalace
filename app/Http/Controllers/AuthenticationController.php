@@ -290,7 +290,7 @@ class AuthenticationController extends Controller {
                if($user){
                    Session::put("profile_pic",asset("upload/images/profile/"."/".$user->profile_pic));
                    Session::put("currency",$user->currency);
-                  //  Session::put("demo", false);
+                   Session::put("demo", 1);
                    return  redirect("dashboard");    
                } 
                else{

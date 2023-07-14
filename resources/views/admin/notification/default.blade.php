@@ -67,14 +67,9 @@
                   </div>
                   <div class="col-md-12">
                      <div class="col-md-6">
-                        @if(Session::get("demo")==0)
-                               <input id="payment-button" type="button" class="btn btn-primary btn-md form-control" onclick="disablebtn()" value="{{__('messages.add')}}">
-                           
-                           </button>
-                           @else
+                      
                              <input id="payment-button" type="submit" class="btn btn-primary btn-md form-control" value="{{__('messages.add')}}">
                            
-                           @endif
                      </div>
                      <div class="col-md-6">
                         <input type="button" class="btn btn-secondary btn-md form-control" data-dismiss="modal" value="{{__('messages.close')}}">
