@@ -5,8 +5,17 @@
         border: 2px solid <?=Session::get("webcolor")?> !important;
     }
 
-   .first-section .img{
+   .first-section .one.img{
         background-image: url(<?=Session::get("main_banner")?>) !important;
+    }
+    .first-section .two.img{
+        background-image: url('/slider1.jpg') !important;
+        background-size: cover !important;
+    }
+    .first-section .three.img{
+        background-image: url('/slider2.jpg') !important;
+        background-size: cover !important;
+        background-repeat: no-repeat;
     }
 
     .footer-section {
