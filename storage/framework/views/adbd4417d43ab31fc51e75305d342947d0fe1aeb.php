@@ -74,31 +74,31 @@ function headreadMoreHelper($story_desc, $chars = 75)
 
       var current = 1;
 
-      setInterval(() => {
-         if(current == 1){
-            $(".first-section .img").removeClass("one")
-            $(".first-section .img").addClass("two")
-            $(".first-section .img").fadeOut(100)
-            $(".first-section .img").fadeIn(500)
-            current = 2;
-         }else if(current == 2){
-            $(".first-section .img").removeClass("two")
-            $(".first-section .img").addClass("three")
-            $(".first-section .img").fadeOut(100)
-            $(".first-section .img").fadeIn(500)
-            current = 3;
-         }else {
-            $(".first-section .img").removeClass("three")
-            $(".first-section .img").addClass("one")
-            $(".first-section .img").fadeOut(100)
-            $(".first-section .img").fadeIn(500)
-            current = 1;
-         }
-      }, 5000);
+      // setInterval(() => {
+      //    if(current == 1){
+      //       $(".first-section .img").removeClass("one")
+      //       $(".first-section .img").addClass("two")
+      //       $(".first-section .img").fadeOut(100)
+      //       $(".first-section .img").fadeIn(500)
+      //       current = 2;
+      //    }else if(current == 2){
+      //       $(".first-section .img").removeClass("two")
+      //       $(".first-section .img").addClass("three")
+      //       $(".first-section .img").fadeOut(100)
+      //       $(".first-section .img").fadeIn(500)
+      //       current = 3;
+      //    }else {
+      //       $(".first-section .img").removeClass("three")
+      //       $(".first-section .img").addClass("one")
+      //       $(".first-section .img").fadeOut(100)
+      //       $(".first-section .img").fadeIn(500)
+      //       current = 1;
+      //    }
+      // }, 5000);
    </script>
    <style>
       .my-carousel {
-         height : 100vh;
+         height: 100vh;
       }
    </style>
 </head>
@@ -372,9 +372,7 @@ function headreadMoreHelper($story_desc, $chars = 75)
          <?php } ?>
       </div>
    </div>
-   <div class="first-section">
-      <div class="one img">
-      </div>
+   <div class="first-section" style="position : absolute; top : 10px; z-index : 12121; width : 100%">
       <div class="container kb-nav">
          <div class="row">
             <div class="kb-nav-logo">
@@ -456,15 +454,82 @@ function headreadMoreHelper($story_desc, $chars = 75)
                   </ul>
                </div>
             </div>
-            <div class="kb-text-box">
-               <h1><?php echo e(__('messages.silder1h')); ?></h1>
-               <h2><?php echo e(__('messages.silderh2')); ?></h2>
-               <p><?php echo e(__('messages.silderp')); ?>.</p>
-            </div>
-
          </div>
       </div>
    </div>
+   <style>
+      .carousel-item {
+         height: 95vh;
+         min-height: 400px;
+         /* display: flex; */
+         /* align-items: center; */
+      }
+
+      .carousel-item .col-12 {
+         height: 95vh;
+         min-height: 400px;
+         display: flex;
+         align-items: center;
+      }
+   </style>
+   <div id="carouselExampleControls" class="carousel caro slide" data-ride="carousel">
+      <div class="carousel-inner">
+         <div class="carousel-item one img active">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="kb-text-box" style="padding : 1rem; margin : 0; margin-top : 50px">
+                        <h1><?php echo e(__('messages.silder1h')); ?></h1>
+                        <h2><?php echo e(__('messages.silderh2')); ?></h2>
+                        <p><?php echo e(__('messages.silderp')); ?>.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="carousel-item two img">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="kb-text-box" style="padding : 1rem ; margin : 0; margin-top : 50px">
+                        <h1><?php echo e(__('messages.silder1h')); ?></h1>
+                        <h2><?php echo e(__('messages.silderh2')); ?></h2>
+                        <p><?php echo e(__('messages.silderp')); ?>.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+   
+
+         <div class="carousel-item three img">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12">
+                     <div class="kb-text-box" style="padding : 1rem ; margin : 0; margin-top : 50px">
+                        <h1><?php echo e(__('messages.silder1h')); ?></h1>
+                        <h2><?php echo e(__('messages.silderh2')); ?></h2>
+                        <p><?php echo e(__('messages.silderp')); ?>.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+      </a>
+   </div>
+   <br>
+   <br>
    <!-- coming here -->
    <div class="secound-section d-none">
       <div class="container">
@@ -500,7 +565,7 @@ function headreadMoreHelper($story_desc, $chars = 75)
 
    <div class="main-pizza-sb">
       <div class="container">
-         <div class="carousel">
+         <div class="carousel carouslider">
             <?php $i = 0; ?>
             <?php $__currentLoopData = $category; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $ca): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php if($i==0): ?>
@@ -775,6 +840,10 @@ function headreadMoreHelper($story_desc, $chars = 75)
 <script type="text/javascript" src="<?php echo e(URL::to('demo/button.js')); ?>"></script>
 <script src="<?php echo e(URL::to('demo/script.js')); ?>"></script>
 <script type="text/javascript">
+   $("#carouselExampleControls").carousel({
+      autoplay: true
+   })
+
    function changecategory(cat_id, id) {
       var total = $("#totalcategory").val();
       console.log(id);
