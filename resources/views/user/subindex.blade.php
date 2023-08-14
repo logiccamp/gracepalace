@@ -315,7 +315,7 @@
          </div>
          <div class="main-pizza-sb-2" style="background-color : #000 !important">
             <div class="container">
-               <div class="carousel">
+               <div class="carouslider">
                   <?php $i=0;?>
                   @foreach($category as $ca)
                   <div class="box" id="box{{$i}}" onclick="changecategory('{{$ca->id}}','{{$i}}')">
